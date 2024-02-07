@@ -37,7 +37,7 @@ export default {
         <figure>
           <img width="60" :src="item.path" alt="icon-services" />
         </figure>
-        <h3>{{ item.title }}</h3>
+        <h4>{{ item.title }}</h4>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@ export default {
 div {
   background-color: #0282f9;
   .card-container {
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -57,6 +57,10 @@ div {
       display: flex;
       align-items: center;
       gap: 15px;
+      h4 {
+        text-transform: uppercase;
+        font-weight: 100;
+      }
     }
   }
 }

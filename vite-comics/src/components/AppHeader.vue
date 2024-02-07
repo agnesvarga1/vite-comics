@@ -101,6 +101,7 @@ header {
 
       li {
         height: inherit;
+
         a {
           display: flex;
           align-items: center;
@@ -108,6 +109,10 @@ header {
           color: #303030;
           text-transform: uppercase;
           font-weight: bold;
+        }
+        .active {
+          border-bottom: 2px solid "#0282F9";
+          color: #0282f9;
         }
       }
     }
