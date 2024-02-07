@@ -105,7 +105,7 @@ header {
           display: flex;
           align-items: center;
           height: inherit;
-          color: #1c1c1c;
+          color: #303030;
           text-transform: uppercase;
           font-weight: bold;
         }

@@ -1,11 +1,15 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
+
 import ListDC from "./components/ListDC.vue";
+
+import Cards from "./components/Cards.vue";
 export default {
   name: "App",
   components: {
     AppHeader,
     ListDC,
+    Cards,
   },
 };
 </script>
@@ -14,6 +18,7 @@ export default {
   <AppHeader />
   <main>
     <ListDC />
+    <Cards />
   </main>
 </template>
 

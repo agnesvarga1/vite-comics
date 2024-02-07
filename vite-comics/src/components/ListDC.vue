@@ -6,13 +6,13 @@ export default {
 
 <template>
   <div>
-    <h2>-- Content goes here</h2>
+    <h2>-- Content goes here---</h2>
   </div>
 </template>
 
 <style lang="scss" scoped>
 div {
-  padding-block: 2rem;
+  padding-block: 4rem;
   width: 75%;
   margin: 0 auto;
 }
