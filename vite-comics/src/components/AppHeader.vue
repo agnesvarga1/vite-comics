@@ -67,12 +67,10 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="logo" width="90" />
       </figure>
       <ul>
-        <li
-          :class="item.current ? `active` : ``"
-          v-for="(item, index) in arrayNavMenu"
-          :key="index"
-        >
-          <a :href="item.link">{{ item.linkName }}</a>
+        <li v-for="(item, index) in arrayNavMenu" :key="index">
+          <a :href="item.link" :class="item.current ? 'active' : ''">{{
+            item.linkName
+          }}</a>
         </li>
       </ul>
     </nav>
@@ -80,7 +78,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
 header {
   background-color: #fff;
   nav {
@@ -110,11 +107,11 @@ header {
           text-transform: uppercase;
           font-weight: bold;
         }
-        .active {
-          border-bottom: 2px solid "#0282F9";
-          color: #0282f9;
-        }
       }
+    }
+    .active {
+      border-bottom: 5px solid #0282f9;
+      color: #0282f9;
     }
   }
 }
