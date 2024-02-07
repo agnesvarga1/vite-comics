@@ -161,6 +161,7 @@ footer {
     div {
       display: flex;
       gap: 20px;
+      align-items: center;
       h2 {
         color: #0282f9;
         text-transform: uppercase;
