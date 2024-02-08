@@ -78,6 +78,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 header {
   background-color: #fff;
   nav {
@@ -106,6 +107,9 @@ header {
           color: #303030;
           text-transform: uppercase;
           font-weight: bold;
+          &:hover {
+            color: #0282f9;
+          }
         }
       }
     }

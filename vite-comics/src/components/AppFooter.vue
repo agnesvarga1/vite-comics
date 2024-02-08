@@ -97,6 +97,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 #wrapper {
   background-image: url("../assets/img/footer-bg.jpg");
   background-size: cover;
@@ -133,13 +134,14 @@ export default {
       position: relative;
       figure {
         position: absolute;
-        top: -120px;
+        top: 50%;
+        transform: translatey(-50%);
       }
     }
   }
 }
 footer {
-  background-color: #303030;
+  background-color: $dark-gray;
   position: absolute;
   width: 100%;
   .footer-container {
@@ -152,7 +154,7 @@ footer {
     button {
       padding: 1rem 2rem;
       background: transparent;
-      border: 3px solid #0282f9;
+      border: 3px solid $blue-main;
       color: #fff;
       text-transform: uppercase;
       font-size: 18px;
@@ -163,7 +165,7 @@ footer {
       gap: 20px;
       align-items: center;
       h2 {
-        color: #0282f9;
+        color: $blue-main;
         text-transform: uppercase;
       }
       ul {

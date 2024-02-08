@@ -5,23 +5,23 @@ export default {
     return {
       arrayCards: [
         {
-          path: "../../src/assets/img/buy-comics-digital-comics.png",
+          path: "buy-comics-digital-comics.png",
           title: "Digital Comics",
         },
         {
-          path: "../../src/assets/img/buy-comics-merchandise.png",
+          path: "buy-comics-merchandise.png",
           title: "DC merchandise",
         },
         {
-          path: "../../src/assets/img/buy-comics-subscriptions.png",
+          path: "buy-comics-subscriptions.png",
           title: "Subscription",
         },
         {
-          path: "../../src/assets/img/buy-comics-shop-locator.png",
+          path: "buy-comics-shop-locator.png",
           title: "comic shop locator",
         },
         {
-          path: "../../src/assets/img/buy-dc-power-visa.svg",
+          path: "buy-dc-power-visa.svg",
           title: "DC power visa",
         },
       ],
@@ -35,7 +35,11 @@ export default {
     <div class="card-container">
       <div v-for="(item, index) in arrayCards" :key="index" class="card">
         <figure>
-          <img width="60" :src="item.path" alt="icon-services" />
+          <img
+            width="50"
+            :src="`../../src/assets/img/${item.path}`"
+            alt="icon-services"
+          />
         </figure>
         <h4>{{ item.title }}</h4>
       </div>
@@ -44,8 +48,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 div {
-  background-color: #0282f9;
+  background-color: $blue-main;
   .card-container {
     padding: 2rem 5rem;
     width: 75%;
@@ -57,6 +62,11 @@ div {
       display: flex;
       align-items: center;
       gap: 15px;
+      figure {
+        img {
+          height: 60px;
+        }
+      }
       h4 {
         text-transform: uppercase;
         font-weight: 100;
