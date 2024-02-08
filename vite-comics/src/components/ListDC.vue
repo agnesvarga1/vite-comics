@@ -1,6 +1,8 @@
 <script>
+import ComicComp from "./ComicComp.vue";
 export default {
   name: "ListDC",
+  components: { ComicComp },
   data() {
     return {
       arrayOfComics: [
@@ -100,6 +102,26 @@ export default {
   </div>
   <div class="bottom-part">
     <div class="container bottom-part-main">
+      <div class="comics-main">
+        <ComicComp
+          v-for="(item, index) in arrayOfComics"
+          :key="index"
+          :img="item.thumb"
+          :title="item.series"
+        />
+        <!-- <img
+            src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
+            alt=""
+          />
+          <h4>Title</h4>
+        </div>
+        <div class="comic">
+          <img
+            src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
+            alt=""
+          />
+          <h4>Title</h4> -->
+      </div>
       <div class="load-more">
         <button class="btn-load-comics">load more</button>
       </div>
@@ -135,6 +157,13 @@ button {
   background-color: $bg-dark;
   padding-block: 1rem;
   text-align: center;
+
+  .comics-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
   .load-more {
     .btn-load-comics {
       margin: 0;
