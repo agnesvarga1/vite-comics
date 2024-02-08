@@ -51,6 +51,7 @@ export default {
 @use "../styles/partials/variables" as *;
 div {
   background-color: $blue-main;
+
   .card-container {
     padding: 2rem 5rem;
     width: 75%;
